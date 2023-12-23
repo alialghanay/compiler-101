@@ -1,0 +1,5 @@
+Symbol Table
+ID	Name	Type	Line
+1	number	int	3
+2	x	int	4
+3	y	int	5
