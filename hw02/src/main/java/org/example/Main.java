@@ -1,19 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
-package com.mycompany.iofilestreem;
-
+package org.example;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- *
- * @author HP
- */
-public class Iofilestreem {
 
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+public class Main {
     public static void main(String[] args) {
         String currentPath = System.getProperty("user.dir");
         System.out.println(currentPath);
