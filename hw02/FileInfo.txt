@@ -1,0 +1,6 @@
+Date: 2024-02-22T09:58:39.026433900
+Compelling Time: 32 milliseconds
+Number of Lines: 2
+Size of File (D:\repo\compiler-101\hw02\source.c): 22 bytes
+Your Name: علي محمد الغناي
+Your ID: 2191804737

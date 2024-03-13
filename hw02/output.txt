@@ -1,0 +1,6 @@
+Date: 2024-02-19T01:02:05.676439700
+Compelling Time: 3 milliseconds
+Number of Lines: 16
+Size of File (source.c): 306 bytes
+Your Name: علي محمد الغناي
+Your ID: 2191804737

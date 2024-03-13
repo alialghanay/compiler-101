@@ -1,2 +1,13 @@
-email: bayram.zarty@gmail.com
-password: ********
+<ID : 1 --> a >
+<OPERATOR --> = >
+<CONSTANT --> 1 >
+<OPERATOR --> + >
+<CONSTANT --> 2 >
+<SPECIAL --> ; >
+<ID : 2 --> b >
+<OPERATOR --> = >
+<ID : 1 --> a >
+<OPERATOR --> + >
+<ID : 3 --> c >
+<SPECIAL --> ; >
+count of b ==0

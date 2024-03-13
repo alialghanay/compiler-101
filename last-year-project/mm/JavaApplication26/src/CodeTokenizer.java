@@ -112,3 +112,101 @@ public class CodeTokenizer {
         return Arrays.asList(operators).contains(token);
     }
 }
+
+
+public class FileLineReader {
+    public static ArrayList<String> readLines(String filename) {
+        ArrayList<String> lines = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            StringBuilder line = new StringBuilder();
+            int currentChar;
+
+            while ((currentChar = reader.read()) != -1) {
+                char currentCharacter = (char) currentChar;
+
+                // Append characters to the line until encountering a line break
+                if (currentCharacter != '\n' && currentCharacter != '\r') {
+                    line.append(currentCharacter);
+                } else {
+                    // Add the line to the list and reset StringBuilder for the next line
+                    lines.add(line.toString());
+                    line.setLength(0);
+                }
+            }
+
+            // If there's still content in the line, add it to the list
+            if (line.length() > 0) {
+                lines.add(line.toString());
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return lines;
+    }
+
+    public static void main(String[] args) {
+        String filename = "file.c"; // Change this to your C source file name
+
+        ArrayList<String> fileLines = readLines(filename);
+
+        // Displaying the lines read from the file
+        for (String line : fileLines) {
+            System.out.println(line);
+        }
+    }
+}
+
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class CTokenGenerator {
+    public static void main(String[] args) {
+        String sourceFileName = "source.c"; // Change this to your C source file name
+        String tokenFileName = "tokens.txt"; // Change this to your token file name
+
+        try (FileReader reader = new FileReader(sourceFileName);
+             FileWriter writer = new FileWriter(tokenFileName);
+             PrintWriter tokenWriter = new PrintWriter(writer)) {
+
+            int currentChar;
+            StringBuilder currentToken = new StringBuilder();
+
+            while ((currentChar = reader.read()) != -1) {
+                char currentCharacter = (char) currentChar;
+
+                // Check for tokenization logic here
+                if (Character.isLetterOrDigit(currentCharacter) || currentCharacter == '.') {
+                    currentToken.append(currentCharacter);
+                } else {
+                    if (currentToken.length() > 0) {
+                        // Process the token
+                        String token = currentToken.toString();
+                        // Here, you can implement logic to identify different types of tokens
+                        // For example, checking if the token is a keyword, identifier, operator, etc.
+                        tokenWriter.println(token);
+                        currentToken.setLength(0); // Reset token StringBuilder
+                    }
+                    // Additional logic to handle other types of tokens
+                }
+            }
+
+            // Handle any remaining token after reaching EOF
+            if (currentToken.length() > 0) {
+                tokenWriter.println(currentToken);
+            }
+
+            System.out.println("Tokens generated successfully.");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+

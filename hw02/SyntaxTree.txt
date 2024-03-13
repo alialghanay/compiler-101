@@ -1,0 +1,64 @@
++-- Program
+|     +-- Statement
+  |       +-- Expression
+    |         +-- ID
+    |         +-- :
+              +-- 1
+          +-- Expression
+              +-- a
+|     +-- Statement
+          +-- Expression
+              +-- OPERATOR
+|     +-- Statement
+  |       +-- Expression
+              +-- CONSTANT
+          +-- Expression
+              +-- 1
+|     +-- Statement
+          +-- Expression
+              +-- OPERATOR
+|     +-- Statement
+  |       +-- Expression
+              +-- CONSTANT
+          +-- Expression
+              +-- 2
+|     +-- Statement
+          +-- Expression
+              +-- SPECIAL
+|     +-- Statement
+  |       +-- Expression
+    |         +-- ID
+    |         +-- :
+              +-- 2
+          +-- Expression
+              +-- b
+|     +-- Statement
+          +-- Expression
+              +-- OPERATOR
+|     +-- Statement
+  |       +-- Expression
+    |         +-- ID
+    |         +-- :
+              +-- 1
+          +-- Expression
+              +-- a
+|     +-- Statement
+          +-- Expression
+              +-- OPERATOR
+|     +-- Statement
+  |       +-- Expression
+    |         +-- ID
+    |         +-- :
+              +-- 3
+          +-- Expression
+              +-- c
+|     +-- Statement
+          +-- Expression
+              +-- SPECIAL
+      +-- Statement
+  |       +-- Expression
+    |         +-- count
+    |         +-- of
+              +-- b
+          +-- Expression
+              +-- 0
